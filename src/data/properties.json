@@ -1,0 +1,35 @@
+[
+  {
+    "id": 101,
+    "title": "2BR Apartment in Bakau",
+    "price": 35000,
+    "location": "Bakau",
+    "beds": 2,
+    "baths": 1,
+    "images": ["https://images.unsplash.com/photo-1560184897-6a7f9a52c9f6?w=1200&q=80"],
+    "listedAt": "2025-09-15T10:00:00Z",
+    "description": "Cozy 2BR near the beach."
+  },
+  {
+    "id": 102,
+    "title": "3BR Townhouse in Kotu",
+    "price": 65000,
+    "location": "Kotu",
+    "beds": 3,
+    "baths": 2,
+    "images": ["https://images.unsplash.com/photo-1572120360610-d971b9b7f5c8?w=1200&q=80"],
+    "listedAt": "2025-09-20T11:00:00Z",
+    "description": "Spacious family home with parking."
+  },
+  {
+    "id": 103,
+    "title": "1BR Studio in Serekunda",
+    "price": 22000,
+    "location": "Serekunda",
+    "beds": 1,
+    "baths": 1,
+    "images": ["https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80"],
+    "listedAt": "2025-10-01T09:00:00Z",
+    "description": "Compact studio, great for singles."
+  }
+]
