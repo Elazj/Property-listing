@@ -11,7 +11,7 @@ function Protected({ children }) {
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 centered">
       <Header />
       <main className="container py-6">
         <Routes>

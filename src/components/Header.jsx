@@ -1,26 +1,40 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { isLoggedIn, logout, getToken } from '../utils/auth'
+import { isLoggedIn, logout } from '../utils/auth'
 
 export default function Header() {
   const navigate = useNavigate()
-  function handleLogout() {
+
+  const handleLogout = () => {
     logout()
     navigate('/login')
   }
-  const token = getToken()
+
   return (
-    <header className="bg-white border-b">
-      <div className="container flex items-center justify-between py-3">
-        <Link to="/properties" className="text-xl font-bold text-accent">Properties</Link>
-        <nav className="flex items-center gap-3">
+    <header className="bg-white shadow-sm sticky top-0 z-10">
+      <div className="container mx-auto flex items-center justify-between py-4 px-6">
+        <Link
+          to="/properties"
+          className="text-2xl font-bold text-gray-800 hover:text-accent transition"
+        >
+          Properties
+        </Link>
+
+        <nav>
           {isLoggedIn() ? (
-            <>
-              <span className="text-sm text-gray-600">{token?.user?.email || 'user'}</span>
-              <button onClick={handleLogout} className="px-3 py-1 rounded bg-accent text-white text-sm">Logout</button>
-            </>
+            <button
+              onClick={handleLogout}
+              className="px-4 py-2  text-white bg-blue-600 text-sm font-medium rounded-md hover:bg-blue-700 transition shadow-sm"
+            >
+              Logout
+            </button>
           ) : (
-            <Link to="/login" className="px-3 py-1 rounded bg-accent text-white text-sm">Login</Link>
+            <Link
+              to="/login"
+              className="px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-md hover:bg-blue-700 transition shadow-sm"
+            >
+              Login
+            </Link>
           )}
         </nav>
       </div>
